@@ -10,7 +10,6 @@ const HeaderComponent = () => {
   return (
     <Box
       justifyContent="start"
-      bg="gray.400"
       width="100%"
       opacity="0.95"
       top={0}
