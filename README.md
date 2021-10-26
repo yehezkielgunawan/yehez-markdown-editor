@@ -1,41 +1,35 @@
-# Yehez-ViteChakra-Starter
+# Yehez-Markdown-Editor
 
-![Yehezkiel Gunawan's Vite + React + Typescript + Chakra UI Personalized template](https://socialify.git.ci/yehezkielgunawan/yehez-vitechakra-starter/image?description=1&descriptionEditable=Yehezkiel%20Gunawan%27s%20personalized%20Vite%20%2B%20React%20%2B%20Typescript%20%2B%20Chakra%20UI%20Starter%20template&font=Inter&logo=https%3A%2F%2Fseeklogo.com%2Fimages%2FV%2Fvite-logo-BFD4283991-seeklogo.com.png&owner=1&pattern=Floating%20Cogs&theme=Dark)
+![Yehezkiel Gunawan's Personalized markdown editor](<https://socialify.git.ci/yehezkielgunawan/yehez-markdown-editor/image?description=1&descriptionEditable=%F0%9F%93%9DA%20simple%20markdown%20web%20app%20built%20using%20React%20(Vite)%20and%20Chakra%20UI&font=Inter&logo=https%3A%2F%2Fimage.flaticon.com%2Ficons%2Fpng%2F512%2F1031%2F1031982.png&owner=1&pattern=Circuit%20Board&theme=Dark>)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/git?s=https://github.com/yehezkielgunawan/yehez-vitechakra-starter) [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/yehezkielgunawan/yehez-vitechakra-starter)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/git?s=https://github.com/yehezkielgunawan/yehez-markdown-editor) [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/yehezkielgunawan/yehez-markdown-editor)
 
-This is a personalized React JS (using Vite as a build tools, and Chakra UI as a UI Library) starter template. Actually, I made this for myself so I don't need to waste my time to overthinking about the config and setup and focusing on the development.
+This is a simple live markdown editor, build with React (Vite) and Chakra UI. You can access the live demo at [markdown.yehezgun.com](https://markdown.yehezgun.com).
 
-But if you also find this template is useful, you also can use it. And of course I'm open to any feedbacks. You can fork or clone this repo and make a PR here if you have a some idea.
+This project was scaffolded using [yehez-vitechakra-starter](https://github.com/yehezkielgunawan/yehez-vitechakra-starter).
 
-## ⚡ What's include here?
+Actually, I made it for myself. But of course I'm open to any feedbacks. You can fork or clone this repo and make a PR here if you have some idea.
 
-- Toolings for linting, formatting, and conventions configured.
-  `eslint`, `prettier`, `husky` & `lint-staged`
-- ✨Basic responsive layout configuration (using Chakra UI media query)
+## What I'm use here?
+
+- [Vite](https://vitejs.dev/guide/#scaffolding-your-first-vite-project) as build tool.
+- [Chakra UI](https://chakra-ui.com/docs/getting-started) as UI Library.
+- [React Markdown Preview](https://github.com/uiwjs/react-markdown-preview) to make the markdown preview result.
 
 ## How to use it?
 
-- You can open [yehez-vitechakra-starter.yehezgun.com](https://yehez-vitechakra-starter.yehezgun.com) and click `Use this template` button (**_Don't forget to login to your Github account_**).
-- Or you can clone this repo using degit in your terminal. Don't forget to install the needed dependencies using `npm install` or `yarn`.
-
-```
-npx degit yehezkielgunawan/yehez-vitechakra-starter <YOUR_APP_NAME>
-```
-
-- Then run the local server using `yarn dev` or `npm run dev`
+- Open [markdown.yehezgun.com](https://markdown.yehezgun.com)
+- You can input your markdown text at the textarea input, and the preview will be displayed live.
+- Here's [Markdown Cheatsheet](https://www.markdownguide.org/cheat-sheet) to help you write the markdown text.
 
 ## References
 
 - [Vite Docs](https://vitejs.dev/) - Learn about Vite and its features
 - [Chakra UI](https://chakra-ui.com/) - UI component
 - [Typescript](https://www.typescriptlang.org/) - The programming language
-- [The24thDS Starter Template](https://github.com/The24thDS/vite-reactts17-chakra-jest-husky) - as my main reference for the base config settings.
-- [Sozonome Vite Chakra Starter](https://vite-react-chakra-starter.sznm.dev/) - as my main layout idea reference.
+- [React Markdown Preview](https://github.com/uiwjs/react-markdown-preview) - For the markdown previewer component.
 
 ## Future Improvement
 
-- [x] Update the layout
-- [x] Add ESLint basic configuration
-- [x] Add prettier basic configuration
-- [x] Husky base config
+- [ ] Reset the textarea button
+- [ ] Copy the clipboard button

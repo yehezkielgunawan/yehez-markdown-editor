@@ -34,7 +34,14 @@ const HeaderComponent = () => {
         </Text>
 
         <Flex gridGap={3} align="center">
-          <Button leftIcon={<FaGithub />} variant="ghost" size="sm">
+          <Button
+            leftIcon={<FaGithub />}
+            variant="ghost"
+            size="sm"
+            as="a"
+            target="_blank"
+            href="https://github.com/yehezkielgunawan/yehez-markdown-editor"
+          >
             Open in Github
           </Button>
 
