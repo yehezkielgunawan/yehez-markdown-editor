@@ -2,8 +2,6 @@
 
 ![Yehezkiel Gunawan's Personalized markdown editor](<https://socialify.git.ci/yehezkielgunawan/yehez-markdown-editor/image?description=1&descriptionEditable=%F0%9F%93%9DA%20simple%20markdown%20web%20app%20built%20using%20React%20(Vite)%20and%20Chakra%20UI&font=Inter&logo=https%3A%2F%2Fimage.flaticon.com%2Ficons%2Fpng%2F512%2F1031%2F1031982.png&owner=1&pattern=Circuit%20Board&theme=Dark>)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/git?s=https://github.com/yehezkielgunawan/yehez-markdown-editor) [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/yehezkielgunawan/yehez-markdown-editor)
-
 This is a simple live markdown editor, build with React (Vite) and Chakra UI. You can access the live demo at [markdown.yehezgun.com](https://markdown.yehezgun.com).
 
 This project was scaffolded using [yehez-vitechakra-starter](https://github.com/yehezkielgunawan/yehez-vitechakra-starter).
