@@ -1,5 +1,11 @@
 import { Button } from "@chakra-ui/button";
-import { CopyIcon } from "@chakra-ui/icons";
+import {
+  FormControl,
+  FormHelperText,
+  FormLabel,
+} from "@chakra-ui/form-control";
+import { CopyIcon, DownloadIcon } from "@chakra-ui/icons";
+import { Input } from "@chakra-ui/input";
 import { Box, Divider, Flex, Heading, Stack } from "@chakra-ui/layout";
 import { Textarea } from "@chakra-ui/textarea";
 import MarkdownPreview from "@uiw/react-markdown-preview";
@@ -15,12 +21,17 @@ function App() {
   const isDesktopWidth = useDesktopWidthCheck();
   const toast = useAppToast();
   const [value, setValue] = useState<string>(dummyInput);
+  const [fileName, setFileName] = useState<string>("README.md");
 
   const changeTextInput = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     return setValue(event.target.value);
   };
 
-  const resetInput = () => setValue("");
+  const changeFileName = (e: React.ChangeEvent<HTMLInputElement>) => {
+    return setFileName(e.target.value ? e.target.value : "README.md");
+  };
+
+  const clearInputField = () => setValue("");
 
   const copyToClipboard = () => {
     toast({
@@ -28,6 +39,16 @@ function App() {
       title: "Text copied successfully!",
     });
     return navigator.clipboard.writeText(value);
+  };
+
+  const downloadMD = (customName?: string) => {
+    const textToSave = value;
+    const hiddenElement = document.createElement("a");
+
+    hiddenElement.href = "data:attachment/text," + encodeURI(textToSave);
+    hiddenElement.target = "_blank";
+    hiddenElement.download = customName ? customName : "README.md";
+    hiddenElement.click();
   };
 
   return (
@@ -56,21 +77,47 @@ function App() {
             variant="outline"
             value={value}
           />
-          <Flex justify="end" gridGap={4}>
-            <Button
-              colorScheme="teal"
-              onClick={() => copyToClipboard()}
-              leftIcon={<CopyIcon />}
-            >
-              Copy to Clipboard
-            </Button>
-            <Button
-              colorScheme="yellow"
-              onClick={() => resetInput()}
-              leftIcon={<GrPowerReset />}
-            >
-              Reset Input
-            </Button>
+          <Flex
+            justify="space-between"
+            align="center"
+            gridGap={2}
+            wrap={isDesktopWidth ? "nowrap" : "wrap"}
+          >
+            <FormControl>
+              <FormLabel>Custom Filename (and format): </FormLabel>
+              <Input
+                maxW="46rem"
+                onChange={changeFileName}
+                variant="filled"
+                placeholder="Ex: README.md"
+                borderColor="black"
+                borderWidth="1px"
+              />
+              <FormHelperText>Default filename: README.md</FormHelperText>
+            </FormControl>
+            <Flex justify="end" gridGap={2} wrap="inherit">
+              <Button
+                colorScheme="telegram"
+                leftIcon={<DownloadIcon />}
+                onClick={() => downloadMD(fileName)}
+              >
+                Download
+              </Button>
+              <Button
+                colorScheme="teal"
+                onClick={() => copyToClipboard()}
+                leftIcon={<CopyIcon />}
+              >
+                Copy to Clipboard
+              </Button>
+              <Button
+                colorScheme="yellow"
+                onClick={() => clearInputField()}
+                leftIcon={<GrPowerReset />}
+              >
+                Clear Input Field
+              </Button>
+            </Flex>
           </Flex>
         </Stack>
         <Stack w="100%" spacing={4}>

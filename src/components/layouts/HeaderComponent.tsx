@@ -3,10 +3,7 @@ import { Button, Icon } from "@chakra-ui/react";
 import { CgNotes } from "react-icons/cg";
 import { FaGithub } from "react-icons/fa";
 
-import { useDesktopWidthCheck } from "../../functions/helpers/desktopWidthChecker";
-
 const HeaderComponent = () => {
-  const isDesktopWidth = useDesktopWidthCheck();
   return (
     <Box
       justifyContent="start"
@@ -15,13 +12,7 @@ const HeaderComponent = () => {
       top={0}
       transition="0.3s ease-out"
     >
-      <Flex
-        justifyContent="space-between"
-        py={2}
-        align="center"
-        mx={4}
-        px={isDesktopWidth ? 1 : 3}
-      >
+      <Flex justifyContent="space-between" py={2} align="center" mx={2}>
         <Text as="a" href="/" fontSize="lg">
           <Icon as={CgNotes} /> <b>yehez-markdown-editor</b>
         </Text>
