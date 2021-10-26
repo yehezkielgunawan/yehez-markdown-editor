@@ -77,12 +77,7 @@ function App() {
             variant="outline"
             value={value}
           />
-          <Flex
-            justify="space-between"
-            align="center"
-            gridGap={2}
-            wrap={isDesktopWidth ? "nowrap" : "wrap"}
-          >
+          <Stack alignItems="end" spacing={2}>
             <FormControl>
               <FormLabel>Custom Filename (and format): </FormLabel>
               <Input
@@ -95,7 +90,7 @@ function App() {
               />
               <FormHelperText>Default filename: README.md</FormHelperText>
             </FormControl>
-            <Flex justify="end" gridGap={2} wrap="inherit">
+            <Flex gridGap={2}>
               <Button
                 colorScheme="telegram"
                 leftIcon={<DownloadIcon />}
@@ -118,7 +113,7 @@ function App() {
                 Clear Input Field
               </Button>
             </Flex>
-          </Flex>
+          </Stack>
         </Stack>
         <Stack w="100%" spacing={4}>
           <Heading as="h4" size="lg">
