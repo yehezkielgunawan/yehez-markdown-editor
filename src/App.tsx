@@ -127,6 +127,7 @@ function App() {
             overflowY="scroll"
             h="30rem"
             overflowX="auto"
+            pl={1}
           >
             <MarkdownPreview source={value} />
           </Box>
