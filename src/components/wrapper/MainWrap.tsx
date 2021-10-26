@@ -18,7 +18,6 @@ const MainWrap = ({ children }: MainProps) => {
       initial="before"
       animate="after"
       width="100%"
-      pt="4rem"
       px={isDesktopWidth ? 4 : 3}
       mt={8}
       spacing={4}

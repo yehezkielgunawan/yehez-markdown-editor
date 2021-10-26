@@ -1,4 +1,4 @@
-import { Flex, useColorMode } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import { ReactNode } from "react";
 
 import FooterComponent from "../layouts/FooterComponent";
@@ -9,15 +9,12 @@ type ContainerProps = {
 };
 
 const ContainerWrapper = ({ children }: ContainerProps) => {
-  const { colorMode } = useColorMode();
-
-  const color = { light: "black", dark: "white" };
   return (
     <Flex
       direction="column"
       alignItems="center"
       justifyContent="flex-start"
-      color={color[colorMode]}
+      bg="gray.400"
     >
       <HeaderComponent />
       {children}

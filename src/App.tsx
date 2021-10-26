@@ -52,6 +52,8 @@ function App() {
             maxW="46rem"
             border="1px"
             borderColor="gray"
+            focusBorderColor="blue.500"
+            variant="outline"
             value={value}
           />
           <Flex justify="end" gridGap={4}>
