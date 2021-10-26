@@ -90,7 +90,7 @@ function App() {
               />
               <FormHelperText>Default filename: README.md</FormHelperText>
             </FormControl>
-            <Flex gridGap={2}>
+            <Flex gridGap={2} wrap="wrap" justify="end">
               <Button
                 colorScheme="telegram"
                 leftIcon={<DownloadIcon />}
