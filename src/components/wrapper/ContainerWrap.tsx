@@ -14,7 +14,7 @@ const ContainerWrapper = ({ children }: ContainerProps) => {
       direction="column"
       alignItems="center"
       justifyContent="flex-start"
-      bg="gray.200"
+      bg="gray.100"
     >
       <HeaderComponent />
       {children}

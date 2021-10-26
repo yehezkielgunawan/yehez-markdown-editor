@@ -6,7 +6,7 @@ import {
 } from "@chakra-ui/form-control";
 import { CopyIcon, DownloadIcon } from "@chakra-ui/icons";
 import { Input } from "@chakra-ui/input";
-import { Box, Divider, Flex, Heading, Stack } from "@chakra-ui/layout";
+import { Box, Divider, Flex, Heading, Stack, Text } from "@chakra-ui/layout";
 import { Textarea } from "@chakra-ui/textarea";
 import MarkdownPreview from "@uiw/react-markdown-preview";
 import React, { useState } from "react";
@@ -53,7 +53,7 @@ function App() {
 
   return (
     <MainWrap>
-      <Heading as="h2" textAlign="center" fontSize={["md", "2xl"]}>
+      <Heading as="h1" textAlign="center" fontSize={["md", "2xl"]}>
         📝Live Markdown Editor📝
       </Heading>
       <Divider />
@@ -63,9 +63,9 @@ function App() {
         wrap={isDesktopWidth ? "nowrap" : "wrap"}
       >
         <Stack w="100%" spacing={4}>
-          <Heading as="h4" fontSize={["sm", "lg"]}>
-            Input the text here{" "}
-          </Heading>
+          <Text fontSize={["sm", "lg"]}>
+            <b>Input the text here</b>
+          </Text>
 
           <Textarea
             onChange={changeTextInput}
@@ -79,7 +79,7 @@ function App() {
           />
           <Stack alignItems="end" spacing={2}>
             <FormControl>
-              <FormLabel>Custom Filename (and format): </FormLabel>
+              <FormLabel>Custom Filename (and format):</FormLabel>
               <Input
                 maxW="46rem"
                 onChange={changeFileName}
@@ -116,9 +116,9 @@ function App() {
           </Stack>
         </Stack>
         <Stack w="100%" spacing={4}>
-          <Heading as="h4" fontSize={["sm", "lg"]}>
-            Preview
-          </Heading>
+          <Text fontSize={["sm", "lg"]}>
+            <b>Preview</b>
+          </Text>
           <Box
             maxW="46rem"
             border="1px"
