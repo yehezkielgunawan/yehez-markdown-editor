@@ -28,6 +28,7 @@ Actually, I made it for myself. But of course I'm open to any feedbacks. You can
 - [Chakra UI](https://chakra-ui.com/) - UI component
 - [Typescript](https://www.typescriptlang.org/) - The programming language
 - [React Markdown Preview](https://github.com/uiwjs/react-markdown-preview) - For the markdown previewer component.
+- [Freepik Image](https://image.flaticon.com/icons/png/512/1031/1031982.png) - For the image asset.
 
 ## Future Improvement
 
