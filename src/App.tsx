@@ -53,7 +53,7 @@ function App() {
 
   return (
     <MainWrap>
-      <Heading as="h2" textAlign="center">
+      <Heading as="h2" textAlign="center" fontSize={["md", "2xl"]}>
         📝Live Markdown Editor📝
       </Heading>
       <Divider />
@@ -63,7 +63,7 @@ function App() {
         wrap={isDesktopWidth ? "nowrap" : "wrap"}
       >
         <Stack w="100%" spacing={4}>
-          <Heading as="h4" size="lg">
+          <Heading as="h4" fontSize={["sm", "lg"]}>
             Input the text here{" "}
           </Heading>
 
@@ -116,7 +116,7 @@ function App() {
           </Stack>
         </Stack>
         <Stack w="100%" spacing={4}>
-          <Heading as="h4" size="lg">
+          <Heading as="h4" fontSize={["sm", "lg"]}>
             Preview
           </Heading>
           <Box
