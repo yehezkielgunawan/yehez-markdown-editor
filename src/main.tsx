@@ -3,7 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import App from "./App";
-import ContainerWrapper from "./components/wrapper/ContainerWrap";
+import ContainerWrapper from "./components/wrapper/ContainerWrapper";
 import theme from "./theme";
 
 ReactDOM.render(
