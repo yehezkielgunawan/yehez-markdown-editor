@@ -31,5 +31,5 @@ Actually, I made it for myself. But of course I'm open to any feedbacks. You can
 
 ## Future Improvement
 
-- [ ] Reset the textarea button
-- [ ] Copy the clipboard button
+- [x] Reset the textarea button
+- [x] Copy the clipboard button

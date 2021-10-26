@@ -29,7 +29,7 @@ const HeaderComponent = () => {
         px={isDesktopWidth ? 1 : 3}
       >
         <Text as="a" href="/" fontSize="lg">
-          <Icon as={CgNotes} />
+          <Icon as={CgNotes} />{" "}
           <b>yehez-markdown-editor</b>
         </Text>
 
