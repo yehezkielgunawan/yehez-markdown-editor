@@ -13,6 +13,7 @@ Actually, I made it for myself. But of course I'm open to any feedbacks. You can
 - [Vite](https://vitejs.dev/guide/#scaffolding-your-first-vite-project) as build tool.
 - [Chakra UI](https://chakra-ui.com/docs/getting-started) as UI Library.
 - [React Markdown Preview](https://github.com/uiwjs/react-markdown-preview) to make the markdown preview result.
+- [React TextArea Editor](https://github.com/uiwjs/react-textarea-code-editor) as the text editor component.
 
 ## How to use it?
 

@@ -16,6 +16,7 @@
     "@emotion/styled": "^11.3.0",
     "@fontsource/catamaran": "^4.5.0",
     "@uiw/react-markdown-preview": "^3.4.1",
+    "@uiw/react-textarea-code-editor": "^1.4.14",
     "framer-motion": "^4.1.17",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",

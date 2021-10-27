@@ -7,8 +7,8 @@ import {
 import { CopyIcon, DownloadIcon } from "@chakra-ui/icons";
 import { Input } from "@chakra-ui/input";
 import { Box, Divider, Flex, Heading, Stack, Text } from "@chakra-ui/layout";
-import { Textarea } from "@chakra-ui/textarea";
 import MarkdownPreview from "@uiw/react-markdown-preview";
+import CodeEditor from "@uiw/react-textarea-code-editor";
 import React, { useState } from "react";
 import { GrPowerReset, GrTemplate } from "react-icons/gr";
 
@@ -69,16 +69,23 @@ function App() {
             <b>Input the text here</b>
           </Text>
 
-          <Textarea
-            onChange={changeTextInput}
-            h="30rem"
-            maxW="46rem"
-            border="1px"
-            borderColor="gray"
-            focusBorderColor="blue.500"
-            variant="outline"
+          <CodeEditor
             value={value}
-            resize="none"
+            language="markdown"
+            placeholder="Enter the markdown text here."
+            onChange={changeTextInput}
+            padding={12}
+            style={{
+              fontSize: 12,
+              backgroundColor: "#f5f5f5",
+              fontFamily: "catamaran",
+              maxWidth: "46rem",
+              height: "30rem",
+              borderColor: "gray",
+              borderWidth: "1px",
+              borderRadius: "8px",
+              overflowY: "scroll",
+            }}
           />
           <Stack alignItems="start" spacing={2}>
             <FormControl>
@@ -139,7 +146,17 @@ function App() {
             overflowX="auto"
             pl={1}
           >
-            <MarkdownPreview source={value} />
+            <MarkdownPreview
+              source={value}
+              style={{
+                fontSize: 12,
+                backgroundColor: "#f5f5f5",
+                fontFamily:
+                  "ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace",
+                maxWidth: "46rem",
+                height: "30rem",
+              }}
+            />
           </Box>
         </Stack>
       </Flex>
