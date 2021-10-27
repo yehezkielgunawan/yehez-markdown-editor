@@ -6,7 +6,7 @@ import {
 } from "@chakra-ui/form-control";
 import { CopyIcon, DownloadIcon } from "@chakra-ui/icons";
 import { Input } from "@chakra-ui/input";
-import { Box, Divider, Flex, Heading, Stack, Text } from "@chakra-ui/layout";
+import { Divider, Flex, Heading, Stack, Text } from "@chakra-ui/layout";
 import MarkdownPreview from "@uiw/react-markdown-preview";
 import CodeEditor from "@uiw/react-textarea-code-editor";
 import React, { useState } from "react";
@@ -136,28 +136,23 @@ function App() {
           <Text fontSize={["sm", "lg"]}>
             <b>Preview</b>
           </Text>
-          <Box
-            maxW="46rem"
-            border="1px"
-            borderColor="gray"
-            rounded="md"
-            overflowY="scroll"
-            h="30rem"
-            overflowX="auto"
-            pl={1}
-          >
-            <MarkdownPreview
-              source={value}
-              style={{
-                fontSize: 12,
-                backgroundColor: "#f5f5f5",
-                fontFamily:
-                  "ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace",
-                maxWidth: "46rem",
-                height: "30rem",
-              }}
-            />
-          </Box>
+
+          <MarkdownPreview
+            source={value}
+            style={{
+              padding: 12,
+              fontSize: 12,
+              backgroundColor: "#f5f5f5",
+              fontFamily:
+                "ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace",
+              maxWidth: "46rem",
+              height: "30rem",
+              borderColor: "gray",
+              borderWidth: "1px",
+              borderRadius: "8px",
+              overflowY: "scroll",
+            }}
+          />
         </Stack>
       </Flex>
     </MainWrap>
