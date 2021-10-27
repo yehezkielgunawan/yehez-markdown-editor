@@ -14,13 +14,13 @@ import { GrPowerReset, GrTemplate } from "react-icons/gr";
 
 import { useAppToast } from "components/ui/AppToast";
 import MainWrap from "components/wrapper/MainWrap";
-import { dummyInput, templateInput } from "constants/dummyInput";
+import { templateInput } from "constants/dummyInput";
 import { useDesktopWidthCheck } from "functions/helpers/desktopWidthChecker";
 
 function App() {
   const isDesktopWidth = useDesktopWidthCheck();
   const toast = useAppToast();
-  const [value, setValue] = useState<string>(dummyInput);
+  const [value, setValue] = useState<string>("");
   const [fileName, setFileName] = useState<string>("README.md");
 
   const changeTextInput = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
