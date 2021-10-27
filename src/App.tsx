@@ -7,6 +7,7 @@ import {
 import { CopyIcon, DownloadIcon } from "@chakra-ui/icons";
 import { Input } from "@chakra-ui/input";
 import { Divider, Flex, Heading, Stack, Text } from "@chakra-ui/layout";
+import { Box } from "@chakra-ui/react";
 import MarkdownPreview from "@uiw/react-markdown-preview";
 import CodeEditor from "@uiw/react-textarea-code-editor";
 import React, { useState } from "react";
@@ -44,10 +45,9 @@ function App() {
   };
 
   const downloadMD = (customName?: string) => {
-    const textToSave = value;
     const hiddenElement = document.createElement("a");
 
-    hiddenElement.href = "data:attachment/text," + encodeURI(textToSave);
+    hiddenElement.href = "data:attachment/text," + encodeURIComponent(value);
     hiddenElement.target = "_blank";
     hiddenElement.download = customName ? customName : "README.md";
     hiddenElement.click();
@@ -69,24 +69,27 @@ function App() {
             <b>Input the text here</b>
           </Text>
 
-          <CodeEditor
-            value={value}
-            language="markdown"
-            placeholder="Enter the markdown text here."
-            onChange={changeTextInput}
-            padding={12}
-            style={{
-              fontSize: 12,
-              backgroundColor: "#f5f5f5",
-              fontFamily: "catamaran",
-              maxWidth: "46rem",
-              height: "30rem",
-              borderColor: "gray",
-              borderWidth: "1px",
-              borderRadius: "8px",
-              overflowY: "scroll",
-            }}
-          />
+          <Box
+            maxW="46rem"
+            h="30rem"
+            overflowY="scroll"
+            borderWidth="1px"
+            borderRadius="md"
+            bg="gray.200"
+            borderColor="gray"
+          >
+            <CodeEditor
+              value={value}
+              language="markdown"
+              placeholder="Enter the markdown text here."
+              onChange={changeTextInput}
+              padding={12}
+              style={{
+                fontSize: 12,
+                fontFamily: "catamaran",
+              }}
+            />
+          </Box>
           <Stack alignItems="start" spacing={2}>
             <FormControl>
               <FormLabel>Custom Filename (and format):</FormLabel>
@@ -137,22 +140,25 @@ function App() {
             <b>Preview</b>
           </Text>
 
-          <MarkdownPreview
-            source={value}
-            style={{
-              padding: 12,
-              fontSize: 12,
-              backgroundColor: "#f5f5f5",
-              fontFamily:
-                "ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace",
-              maxWidth: "46rem",
-              height: "30rem",
-              borderColor: "gray",
-              borderWidth: "1px",
-              borderRadius: "8px",
-              overflowY: "scroll",
-            }}
-          />
+          <Box
+            maxW="46rem"
+            h="30rem"
+            bg="gray.200"
+            borderWidth="1px"
+            borderRadius="md"
+            borderColor="gray"
+            overflowY="scroll"
+            p={2}
+          >
+            <MarkdownPreview
+              source={value}
+              style={{
+                fontSize: 12,
+                fontFamily:
+                  "ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace",
+              }}
+            />
+          </Box>
         </Stack>
       </Flex>
     </MainWrap>
