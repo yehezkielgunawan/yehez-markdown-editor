@@ -13,9 +13,11 @@ A table:
 `;
 
 export const templateInput = `
-# Yehez-Markdown-Editor
+# App Name
 
-![Yehezkiel Gunawan's Personalized markdown editor](<https://socialify.git.ci/yehezkielgunawan/yehez-markdown-editor/image?description=1&descriptionEditable=%F0%9F%93%9DA%20simple%20markdown%20web%20app%20built%20using%20React%20(Vite)%20and%20Chakra%20UI&font=Inter&logo=https%3A%2F%2Fimage.flaticon.com%2Ficons%2Fpng%2F512%2F1031%2F1031982.png&owner=1&pattern=Circuit%20Board&theme=Dark>)
+![Yehezkiel Gunawan's Personalized markdown editor](https://socialify.git.ci/facebook/react/image?description=1&font=Bitter&language=0&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI%2BCiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8%2BCiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8%2BCiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8%2BCiAgPC9nPgo8L3N2Zz4K&owner=0&pattern=Formal%20Invitation&pulls=1&stargazers=1&theme=Dark)
+
+Below is the example of explanation.
 
 This is a simple live markdown editor, build with React (Vite) and Chakra UI. You can access the live demo at [markdown.yehezgun.com](https://markdown.yehezgun.com).
 
@@ -28,6 +30,11 @@ Actually, I made it for myself. But of course I'm open to any feedbacks. You can
 - [Vite](https://vitejs.dev/guide/#scaffolding-your-first-vite-project) as build tool.
 - [Chakra UI](https://chakra-ui.com/docs/getting-started) as UI Library.
 - [React Markdown Preview](https://github.com/uiwjs/react-markdown-preview) to make the markdown preview result.
+
+## ⚡ What's include here?
+ - Toolings for linting, formatting, and conventions configured. <br>
+ eslint, prettier, husky & lint-staged
+- ✨Basic responsive layout configuration (using Chakra UI media query)
 
 ## How to use it?
 

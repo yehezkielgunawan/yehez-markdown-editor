@@ -78,6 +78,7 @@ function App() {
             focusBorderColor="blue.500"
             variant="outline"
             value={value}
+            resize="none"
           />
           <Stack alignItems="start" spacing={2}>
             <FormControl>
