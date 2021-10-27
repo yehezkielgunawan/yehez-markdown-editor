@@ -10,11 +10,11 @@ import { Box, Divider, Flex, Heading, Stack, Text } from "@chakra-ui/layout";
 import { Textarea } from "@chakra-ui/textarea";
 import MarkdownPreview from "@uiw/react-markdown-preview";
 import React, { useState } from "react";
-import { GrPowerReset } from "react-icons/gr";
+import { GrPowerReset, GrTemplate } from "react-icons/gr";
 
 import { useAppToast } from "components/ui/AppToast";
 import MainWrap from "components/wrapper/MainWrap";
-import { dummyInput } from "constants/dummyInput";
+import { dummyInput, templateInput } from "constants/dummyInput";
 import { useDesktopWidthCheck } from "functions/helpers/desktopWidthChecker";
 
 function App() {
@@ -32,6 +32,8 @@ function App() {
   };
 
   const clearInputField = () => setValue("");
+
+  const useTemplateInput = () => setValue(templateInput);
 
   const copyToClipboard = () => {
     toast({
@@ -77,7 +79,7 @@ function App() {
             variant="outline"
             value={value}
           />
-          <Stack alignItems="end" spacing={2}>
+          <Stack alignItems="start" spacing={2}>
             <FormControl>
               <FormLabel>Custom Filename (and format):</FormLabel>
               <Input
@@ -90,7 +92,7 @@ function App() {
               />
               <FormHelperText>Default filename: README.md</FormHelperText>
             </FormControl>
-            <Flex gridGap={2} wrap="wrap" justify="end">
+            <Flex gridGap={2} wrap="wrap">
               <Button
                 colorScheme="telegram"
                 leftIcon={<DownloadIcon />}
@@ -111,6 +113,13 @@ function App() {
                 leftIcon={<GrPowerReset />}
               >
                 Clear Input Field
+              </Button>
+              <Button
+                colorScheme="orange"
+                onClick={() => useTemplateInput()}
+                leftIcon={<GrTemplate />}
+              >
+                README Template
               </Button>
             </Flex>
           </Stack>
