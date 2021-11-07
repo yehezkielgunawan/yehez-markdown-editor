@@ -61,7 +61,7 @@ function App() {
       <Divider />
       <Flex
         gridGap={2}
-        justify="center"
+        justify="space-between"
         wrap={isDesktopWidth ? "nowrap" : "wrap"}
       >
         <Stack w="100%" spacing={4}>
@@ -70,7 +70,7 @@ function App() {
           </Text>
 
           <Box
-            maxW="46rem"
+            maxW="45rem"
             h="30rem"
             overflowY="scroll"
             borderWidth="1px"
@@ -85,7 +85,7 @@ function App() {
               onChange={changeTextInput}
               padding={12}
               style={{
-                fontSize: 12,
+                fontSize: 14,
                 fontFamily: "catamaran",
               }}
             />
