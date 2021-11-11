@@ -7,7 +7,7 @@ import {
 import { CopyIcon, DownloadIcon } from "@chakra-ui/icons";
 import { Input } from "@chakra-ui/input";
 import { Divider, Flex, Heading, Stack, Text } from "@chakra-ui/layout";
-import { Box } from "@chakra-ui/react";
+import { Box, Link } from "@chakra-ui/react";
 import MarkdownPreview from "@uiw/react-markdown-preview";
 import CodeEditor from "@uiw/react-textarea-code-editor";
 import React, { useState } from "react";
@@ -101,7 +101,18 @@ function App() {
                 borderColor="black"
                 borderWidth="1px"
               />
-              <FormHelperText>Default filename: README.md</FormHelperText>
+              <FormHelperText>
+                Default filename: README.md (Check{" "}
+                <Link
+                  isExternal
+                  href="https://www.markdownguide.org/cheat-sheet"
+                >
+                  <b>
+                    <u>this link</u>
+                  </b>
+                </Link>
+                , if you need a markdown cheatsheet)
+              </FormHelperText>
             </FormControl>
             <Flex gridGap={2} wrap="wrap">
               <Button

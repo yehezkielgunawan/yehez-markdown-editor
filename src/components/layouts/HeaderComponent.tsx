@@ -15,7 +15,7 @@ const HeaderComponent = () => {
       top={0}
       transition="0.3s ease-out"
     >
-      <Flex justifyContent="space-between" py={2} align="center" mx={2}>
+      <Flex justifyContent="space-between" py={2} align="center" mx={1}>
         <Text as="a" href="/" fontSize={["sm", "lg"]}>
           <Icon as={CgNotes} /> <b>yehez-markdown-editor</b>
         </Text>
