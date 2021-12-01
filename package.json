@@ -15,6 +15,7 @@
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
     "@fontsource/catamaran": "^4.5.0",
+    "@typescript-eslint/parser": "^5.5.0",
     "@uiw/react-markdown-preview": "^3.4.1",
     "@uiw/react-textarea-code-editor": "^1.4.14",
     "eslint": "^8.3.0",
